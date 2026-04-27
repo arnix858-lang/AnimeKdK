@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AniWave — просмотр аниме</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="logo" href="#">AniWave</a>
+        <nav class="nav">
+          <a href="#catalog">Каталог</a>
+          <a href="#popular">Популярное</a>
+          <a href="#about">О сервисе</a>
+        </nav>
+        <button class="btn btn--ghost">Войти</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div>
+            <p class="eyebrow">Лучшие тайтлы сезона</p>
+            <h1>Смотри аниме онлайн в хорошем качестве</h1>
+            <p class="hero__text">
+              Удобный каталог, фильтры по жанрам и быстрый плеер — всё, что нужно для комфортного
+              просмотра.
+            </p>
+            <div class="hero__actions">
+              <a class="btn" href="#catalog">Перейти в каталог</a>
+              <button class="btn btn--ghost">Мой список</button>
+            </div>
+          </div>
+          <div class="hero__card">
+            <h3>Сейчас в тренде</h3>
+            <ul id="trendingList"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="catalog">
+        <div class="container">
+          <div class="section__head">
+            <h2>Каталог</h2>
+            <div class="filters">
+              <input id="searchInput" type="search" placeholder="Поиск по названию..." />
+              <select id="genreFilter">
+                <option value="all">Все жанры</option>
+              </select>
+            </div>
+          </div>
+          <div class="cards" id="animeGrid"></div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="popular">
+        <div class="container">
+          <h2>Почему выбирают AniWave</h2>
+          <div class="features">
+            <article>
+              <h3>HD-качество</h3>
+              <p>Чёткая картинка и стабильное воспроизведение на любом устройстве.</p>
+            </article>
+            <article>
+              <h3>Личный список</h3>
+              <p>Добавляй любимые тайтлы и продолжай просмотр с последнего эпизода.</p>
+            </article>
+            <article>
+              <h3>Умный поиск</h3>
+              <p>Быстро находи аниме по названию, жанру и рейтингу.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="about">
+      <div class="container footer__inner">
+        <p>© 2026 AniWave. Фанатский демо-проект для просмотра аниме.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
